@@ -13,12 +13,13 @@
         android:padding="24dp">
 
         <TextView
+            android:id="@+id/titleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to Milestone1"
+            android:text="Sign in to Milestone1"
             android:textSize="26sp"
             android:textStyle="bold"
-            android:layout_marginBottom="32dp" />
+            android:layout_marginBottom="24dp" />
 
         <EditText
             android:id="@+id/emailInput"
@@ -39,19 +40,58 @@
             android:inputType="textPassword"
             android:autofillHints="password" />
 
+        <LinearLayout
+            android:id="@+id/registrationFields"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/registerNameInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="12dp"
+                android:hint="Full name"
+                android:inputType="textPersonName"
+                android:autofillHints="personName" />
+
+            <EditText
+                android:id="@+id/registerAddressInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="12dp"
+                android:hint="Address"
+                android:inputType="textPostalAddress"
+                android:autofillHints="postalAddress" />
+
+            <EditText
+                android:id="@+id/registerPhoneInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:layout_marginTop="12dp"
+                android:hint="Phone number"
+                android:inputType="phone"
+                android:autofillHints="phone" />
+
+        </LinearLayout>
+
         <Button
-            android:id="@+id/signInButton"
+            android:id="@+id/submitButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:text="Sign In" />
 
         <Button
-            android:id="@+id/signUpButton"
+            android:id="@+id/switchModeButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Sign Up" />
+            android:text="Create an account" />
 
     </LinearLayout>
 </ScrollView>
